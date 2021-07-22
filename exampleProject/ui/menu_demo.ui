@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu Demo</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>621</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QListWidget" name="listWidget"/>
+    <widget class="QPlainTextEdit" name="plainTextEdit"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuExamples">
+    <property name="title">
+     <string>Examples</string>
+    </property>
+    <widget class="QMenu" name="menuDialog">
+     <property name="title">
+      <string>Dialog</string>
+     </property>
+     <widget class="QMenu" name="menuQMessageBox">
+      <property name="title">
+       <string>QMessageBox</string>
+      </property>
+      <addaction name="actioninformation"/>
+      <addaction name="actionwarning"/>
+      <addaction name="actionquestion"/>
+      <addaction name="actioncritical"/>
+     </widget>
+     <addaction name="menuQMessageBox"/>
+     <addaction name="actionQInputDialog"/>
+     <addaction name="actionQFileDialog"/>
+     <addaction name="actionQColorDialog"/>
+    </widget>
+    <addaction name="menuDialog"/>
+    <addaction name="actionSimple_Widgets"/>
+    <addaction name="actionLayouts"/>
+    <addaction name="actionAdvanced_Widgets"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout_Us"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExamples"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>../pictures/icon.png</normaloff>../pictures/icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a New Project</string>
+   </property>
+   <property name="statusTip">
+    <string>New Project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>../pictures/banana.png</normaloff>../pictures/banana.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="statusTip">
+    <string>Open Project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save Project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Click To Quit Project</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit Project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionSimple_Widgets">
+   <property name="text">
+    <string>Simple Widgets</string>
+   </property>
+  </action>
+  <action name="actionLayouts">
+   <property name="text">
+    <string>Layouts</string>
+   </property>
+  </action>
+  <action name="actionAdvanced_Widgets">
+   <property name="text">
+    <string>Advanced Widgets</string>
+   </property>
+  </action>
+  <action name="actionQInputDialog">
+   <property name="text">
+    <string>QInputDialog</string>
+   </property>
+  </action>
+  <action name="actionQFileDialog">
+   <property name="text">
+    <string>QFileDialog</string>
+   </property>
+  </action>
+  <action name="actionQColorDialog">
+   <property name="text">
+    <string>QColorDialog</string>
+   </property>
+  </action>
+  <action name="actioninformation">
+   <property name="text">
+    <string>information</string>
+   </property>
+  </action>
+  <action name="actionwarning">
+   <property name="text">
+    <string>warning</string>
+   </property>
+  </action>
+  <action name="actionquestion">
+   <property name="text">
+    <string>question</string>
+   </property>
+  </action>
+  <action name="actioncritical">
+   <property name="text">
+    <string>critical</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="statusTip">
+    <string>Get Help</string>
+   </property>
+   <property name="shortcut">
+    <string>Meta+H</string>
+   </property>
+  </action>
+  <action name="actionAbout_Us">
+   <property name="text">
+    <string>Info</string>
+   </property>
+   <property name="statusTip">
+    <string>Info</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
